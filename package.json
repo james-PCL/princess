@@ -1,0 +1,17 @@
+{
+  "name": "princess",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "test": "cucumber-js --tags @bookingFilter",
+        "test-performance": "cucumber-js --tags @bookingFilter --parallel 3",
+        "report": "node tests/support/report.js"
+    },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.1.0",
+    "@playwright/test": "^1.49.0",
+    "cucumber-html-reporter": "^7.2.0",
+    "dotenv": "^16.4.7",
+    "playwright": "^1.49.0"
+  }
+}
