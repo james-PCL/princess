@@ -13,7 +13,7 @@ const options = {
         "BROWSER": process.env.BROWSER,
         "PLATFORM": process.platform,
         "BASE_URL": process.env.BASE_URL,
-        "BANCH": 'main'
+        "BRANCH": process.env.BRANCH
     }
 };
 

@@ -1,6 +1,10 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 //import cruises from '../../data/cruises.json' with { type: 'json' };
 
+Then('The cruise search page will be displayed successfully', async function () {    
+    await this.pageFactory.cruiseSearch.cruiseTab.isVisible();
+});
+
 When('I search for a cruise by Destination {string}', async function (destinationName) {
     await this.pageFactory.cruiseSearch.SearchByDestination(destinationName);
 });

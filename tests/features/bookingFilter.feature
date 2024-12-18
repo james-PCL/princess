@@ -2,7 +2,7 @@
 Feature: Find Cruise Filter Tests
 
 # Scenario: Filter Cruises by Destination '<DestinationName>'
-#     Given I navigate successfully to production
+#     Given I navigate to the URL
 #     When I click the Find Cruise button
 #     And The cruise search page will be displayed successfully
 #     # And The filtered view results will return '775' cruises
@@ -27,7 +27,7 @@ Feature: Find Cruise Filter Tests
 #     |World Cruises|58|
 
 # Scenario: Filter Cruises by Length '<Length>'
-#     Given I navigate successfully to production
+#     Given I navigate to the URL
 #     When I click the Find Cruise button
 #     And The cruise search page will be displayed successfully
 #     # And The filtered view results will return '775' cruises
@@ -41,7 +41,7 @@ Feature: Find Cruise Filter Tests
 #     |16+ Days|289|
 
 # Scenario: Filter Cruises by Port Name '<PortName>'
-#     Given I navigate successfully to production
+#     Given I navigate to the URL
 #     When I click the Find Cruise button
 #     And The cruise search page will be displayed successfully
 #     # And The filtered view results will return '775' cruises
@@ -86,7 +86,7 @@ Feature: Find Cruise Filter Tests
 #     |Sydney, Australia|85|
 
 Scenario: Filter Cruises by Ship Name '<ShipName>'
-    Given I navigate successfully to production
+    Given I navigate to the URL
     When I click the Find Cruise button
     And The cruise search page will be displayed successfully
     # And The filtered view results will return '775' cruises
@@ -111,11 +111,3 @@ Examples:
 #     |Island Princess|43|
 #     |Royal Princess|42|
 #     |Sky Princess|64|
-
-# Scenario: Filter Cruises by each Destination
-#     Given I navigate successfully to production
-#     When I click the Find Cruise button
-#     And The cruise search page will be displayed successfully
-#     And The filtered view results will return '767' cruises
-#     Then Each cruise filtered by Destination has the correct number of cruises returned
-

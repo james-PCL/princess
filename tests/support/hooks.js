@@ -3,8 +3,6 @@ import { chromium, firefox, webkit, devices } from '@playwright/test';
 import PageFactory from '../../pages/pageFactory.js';
 import Screenshots from './screenshots.js';
 import 'dotenv/config';
-let emulator;
-let context;
 
 class CustomWorld {
   constructor({ attach }) {
@@ -23,11 +21,11 @@ Before(async function (scenario) {
     
     switch (process.env.BROWSER) {
         case 'firefox':
-            this.browser = await firefox.launch({ headless: true });
+            this.browser = await firefox.launch({ headless: false });
             this.page = await this.browser.newPage(); 
             break;
         case 'webkit':
-            this.browser = await webkit.launch({ headless: true });
+            this.browser = await webkit.launch({ headless: false });
             this.page = await this.browser.newPage(); 
             break;
         default:
