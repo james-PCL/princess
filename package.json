@@ -1,10 +1,9 @@
 {
-  "name": "princess",
+  "name": "booking",
     "version": "1.0.0",
     "type": "module",
     "scripts": {
-        "test": "cucumber-js --tags @bookingFilter",
-        "test-performance": "cucumber-js --tags @bookingFilter --parallel 3",
+        "test": "cucumber-js --tags @bookingFilter --parallel 3",
         "report": "node tests/support/report.js"
     },
   "dependencies": {

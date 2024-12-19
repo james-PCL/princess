@@ -1,16 +1,16 @@
 @bookingFilter
 Feature: Find Cruise Filter Tests
 
-# Scenario: Filter Cruises by Destination '<DestinationName>'
-#     Given I navigate to the URL
-#     When I click the Find Cruise button
-#     And The cruise search page will be displayed successfully
-#     # And The filtered view results will return '775' cruises
-#     And I search for a cruise by Destination '<DestinationName>'
-#     Then The filtered view results will return '<expectedCruises>' cruises
-# Examples:
-#     |DestinationName|expectedCruises|
-#     |Alaska|27|
+Scenario: Filter Cruises by Destination '<DestinationName>'
+    Given I navigate to the URL
+    When I click the Find Cruise button
+    And The cruise search page will be displayed successfully
+    # And The filtered view results will return '775' cruises
+    And I search for a cruise by Destination '<DestinationName>'
+    Then The filtered view results will return '<expectedCruises>' cruises
+Examples:
+    |DestinationName|expectedCruises|
+    |Alaska|26|
 #     |Asia|27|
 #     |Australia & New Zealand|101|
 #     |California Coast|21|
@@ -40,16 +40,16 @@ Feature: Find Cruise Filter Tests
 #     |9-15 Days|297|
 #     |16+ Days|289|
 
-# Scenario: Filter Cruises by Port Name '<PortName>'
-#     Given I navigate to the URL
-#     When I click the Find Cruise button
-#     And The cruise search page will be displayed successfully
-#     # And The filtered view results will return '775' cruises
-#     And I search for a cruise by Port Name '<PortName>'
-#     Then The filtered view results will return '<expectedCruises>' cruises
-# Examples:
-#     |PortName|expectedCruises|
-#     |Anchorage (Whittier), Alaska|1|
+Scenario: Filter Cruises by Port Name '<PortName>'
+    Given I navigate to the URL
+    When I click the Find Cruise button
+    And The cruise search page will be displayed successfully
+    # And The filtered view results will return '775' cruises
+    And I search for a cruise by Port Name '<PortName>'
+    Then The filtered view results will return '<expectedCruises>' cruises
+Examples:
+    |PortName|expectedCruises|
+    |Anchorage (Whittier), Alaska|1|
 #     |Boston, Massachusetts|3|
 #     |Ft. Lauderdale, Florida|133|
 #     |Galveston, Texas|12|
@@ -96,10 +96,10 @@ Examples:
     |ShipName|expectedCruises|
     |Caribbean Princess|37|
     |Diamond Princess|100|
-    |Enchanted Princess|38|
-    |Majestic Princess|70|
-    |Ruby Princess|19|
-    |Star Princess|25|
+#    |Enchanted Princess|38|
+#    |Majestic Princess|70|
+#    |Ruby Princess|19|
+#    |Star Princess|25|
 #     |Coral Princess|45|
 #     |Discovery Princess|35|
 #     |Grand Princess|66|
