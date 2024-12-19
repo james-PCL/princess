@@ -3,6 +3,8 @@ import { chromium, firefox, webkit, devices } from '@playwright/test';
 import PageFactory from '../../pages/pageFactory.js';
 import Screenshots from './screenshots.js';
 import 'dotenv/config';
+let emulator;
+let context;
 
 class CustomWorld {
   constructor({ attach }) {
@@ -20,19 +22,25 @@ Before(async function (scenario) {
   //this.screenshots.deleteScreenshots();
     
     switch (process.env.BROWSER) {
+        case 'chrome':
+            this.browser = await chromium.launch({ headless: true });
+            this.page = await this.browser.newPage(); 
+            break;
         case 'firefox':
-            this.browser = await firefox.launch({ headless: false });
+            this.browser = await firefox.launch({ headless: true });
             this.page = await this.browser.newPage(); 
             break;
         case 'webkit':
-            this.browser = await webkit.launch({ headless: false });
+            this.browser = await webkit.launch({ headless: true });
             this.page = await this.browser.newPage(); 
             break;
         default:
-          this.browser = await chromium.launch({ headless: false });
+          this.browser = await chromium.launch({ headless: false , launchOptions: {
+            args: ['--start-maximized']}});
           this.page = await this.browser.newPage();
           break;
     }   
+    
     return this.pageFactory = new PageFactory(this.page);
 
 });

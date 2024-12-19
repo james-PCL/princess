@@ -1,0 +1,29 @@
+{
+    "data1":
+		{
+			"Destination":["Alaska","Asia"],
+			"Length": ["1-5 Days","6-8 Days"],
+			"Port": ["Seattle, Washington","Vancouver, Canada"],
+			"Ship": ["Caribbean Princess","Emerald Princess","Royal Princess"],
+			"ExpectedCruises":"9"
+		},
+	"data2":{
+			"Destination":"Alaska",
+			"Length": "1-5 Days",
+			"Port": "Seattle, Washington",
+			"Ship": "Grand Princess",
+			"ExpectedCruises":"1"
+		},	
+	"data3":{
+			"Destination":"Alaska",
+			"Port":"Seattle, Washington",
+			"ExpectedCruises":"26"
+	},
+	"data4":{
+			"Destination":"Alaska",
+            "Length": "6-8 Days",
+            "ExpectedCruises": "141"
+	}
+}
+		
+	

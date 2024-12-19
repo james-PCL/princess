@@ -10,10 +10,11 @@ class HomePage {
         this.page = page;
         this.findCruiseButton = this.page.locator(`(//a[normalize-space()='Find a Cruise'])[2]`);
         this.searchCruiseButton = this.page.locator(`(//a[normalize-space()='SEARCH CRUISES'])`);
-        this.cookies = this.page.locator("//button[text()='Accept All Cookies']");        
+        
     }
-    
+
     async navigateToURL(){
+
         await this.page.goto(process.env.BASE_URL);
         await expect(this.findCruiseButton).toBeVisible();
         await this.acceptCookies(); 
@@ -25,13 +26,22 @@ class HomePage {
                 await this.cookies.click(); 
             }
         } catch (error) {
-          console.log('No cookie banner found.');
+            console.log('No cookie banner found.');
         }
-    }
 
+      }
+    
     async clickFindCruiseButton(){
         await this.findCruiseButton.click();
     }
+    async clickSearchCruiseButton(){
+        await this.searchCruiseButton.click();
+    }
+
+    async verifyLogin() {
+        // Verify Username after login on homepage
+    }
+
 }
 
 export default HomePage;

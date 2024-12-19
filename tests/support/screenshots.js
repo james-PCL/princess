@@ -1,6 +1,6 @@
 import { Status } from '@cucumber/cucumber';
 import fs from 'fs/promises';
-const screenshotPath = './tmp/screenshots'
+const screenshotPath = process.env.SCREENSHOT_LOC;
 
 class Screenshots {    
     async deleteScreenshots(){
@@ -27,7 +27,7 @@ class Screenshots {
             { path: `${screenshotPath}/${scenarioName}_${hours}_${mins}_${secs}.png`, fullPage: true }
             );
             await context.attach(screenshot, 'image/png');
-            console.log('Successful Screenshot taken')
+            console.log('Successful Screenshot taken');
         }
     }
 }
