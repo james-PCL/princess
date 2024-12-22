@@ -21,15 +21,15 @@ Before(async function (scenario) {
     
     switch (process.env.BROWSER) {
         case 'firefox':
-            this.browser = await firefox.launch({ headless: false });
+            this.browser = await firefox.launch({ headless: true });
             this.page = await this.browser.newPage(); 
             break;
         case 'webkit':
-            this.browser = await webkit.launch({ headless: false });
+            this.browser = await webkit.launch({ headless: true });
             this.page = await this.browser.newPage(); 
             break;
         default:
-          this.browser = await chromium.launch({ headless: false });
+          this.browser = await chromium.launch({ headless: true });
           this.page = await this.browser.newPage();
           break;
     }   
