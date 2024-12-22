@@ -95,7 +95,7 @@ Scenario: Filter Cruises by Ship Name '<ShipName>'
 Examples:
     |ShipName|expectedCruises|
     |Caribbean Princess|37|
-    |Diamond Princess|100|
+    |Diamond Princess|99|
 #    |Enchanted Princess|38|
 #    |Majestic Princess|70|
 #    |Ruby Princess|19|

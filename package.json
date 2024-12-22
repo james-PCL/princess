@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "type": "module",
     "scripts": {
-        "test": "cucumber-js --tags @bookingFilter --parallel 3",
+        "filter": "cucumber-js --tags @bookingFilter --parallel 3",
+        "filterByJson": "cucumber-js --tags @bookingFilters",
         "report": "node tests/support/report.js"
     },
   "dependencies": {
